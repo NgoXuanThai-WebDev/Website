@@ -46,7 +46,7 @@ products.push({
     name: "Shoes",
     price: 89,
     inStock: false
-})
+});
 
 console.log("3.Array after adding an item to the end:", products);
 
@@ -55,7 +55,7 @@ products3 = [product1, product2, product3, product4, product5, {
     name: "Shoes",
     price: 89,
     inStock: true
-}]   
+}];   
 products3.pop();
 console.log("4.Array after removing an item from the end:", products3);
 }
@@ -77,7 +77,7 @@ const forIn = () => {
     for(let key in product1) {
         console.log(key, product1[key]);
     }
-}
+};
 
 popMethod();
 
