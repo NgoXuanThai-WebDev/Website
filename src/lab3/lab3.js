@@ -42,22 +42,24 @@ const products2 = [product1, {
 
 console.log("2.Array after updating the second product price:", products2);
 
-products.push({
+const pushMethod = () => {
+const products3 = [product1, product2, product3, product4, product5];
+products3.push({
     name: "Shoes",
     price: 89,
     inStock: false
 });
-
-console.log("3.Array after adding an item to the end:", products);
+console.log("3.Array after adding an item to the end:", products3);
+}
 
 const popMethod = () => {
-products3 = [product1, product2, product3, product4, product5, {
+const products4 = [product1, product2, product3, product4, product5, {
     name: "Shoes",
     price: 89,
     inStock: true
 }];   
-products3.pop();
-console.log("4.Array after removing an item from the end:", products3);
+products4.pop();
+console.log("4.Array after removing an item from the end:", products4);
 }
 const iterateUsingForeach = () => {
     products.forEach((product) => {
@@ -78,6 +80,8 @@ const forIn = () => {
         console.log(key, product1[key]);
     }
 };
+
+pushMethod();
 
 popMethod();
 
