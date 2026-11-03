@@ -1,7 +1,26 @@
 console.log("Lab5");
 
-const temp = fetch("http://localhost:8000/users");
+// //Promise
+// fetch("http://localhost:8000/users")
+// .then(res => res.json())
+// .then(data => console.log("Promise:", data));
 
-temp
-.then(res => res.json())
-.then(data => console.log(data));
+//async/await
+const fetchUsers= async() => {
+    const res = await fetch("http://localhost:8000/users");
+    const data = await res.json();
+    console.log("check data:", data);
+
+    const tbody = document.querySelector("#users tbody");
+    if (data && data.length) {
+        data.forEach((user, index) => {
+            tbody.innerHTML += `<tr>
+                <td>${user.id}</td>
+                <td>${user.name}</td>
+                <td>${user.email}</td>
+            </tr>`
+        });
+    }
+}
+
+fetchUsers();
